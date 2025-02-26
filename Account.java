@@ -18,6 +18,7 @@ public class Account implements AccountService {
         System.out.println("Date       // Amount  //   Balance");
         transactions.forEach(System.out::println);
     }
+    
 
     private String getDate() {
         return new java.text.SimpleDateFormat("dd/MM/yyyy").format(new Date());
@@ -34,7 +35,6 @@ public class Account implements AccountService {
             this.balance = balance;
         }
 
-        @Override
         public String toString() {
             return String.format("%s // %d    //   %d", date, amount, balance);
         }
@@ -43,6 +43,7 @@ public class Account implements AccountService {
 
 
 // deposit() and withdraw() update the balance and store the transaction
-// printStatement() prints transactions in reverse order to match the expected output
+// printStatement() prints transactions 
 // getDate() provides the current date 
-// Transaction is an inner class storing transaction details
+// Transaction is a class storing transaction details
+
