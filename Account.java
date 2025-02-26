@@ -16,7 +16,6 @@ public class Account implements AccountService {
 
     public void printStatement() {
         System.out.println("Date       // Amount  //   Balance");
-        Collections.reverse(transactions);
         transactions.forEach(System.out::println);
     }
 
